@@ -102,7 +102,7 @@ class CallkitSoundPlayerService : Service() {
         mediaPlayer = MediaPlayer()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val attribution = AudioAttributes.Builder()
-                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                 .setUsage(AudioAttributes.USAGE_NOTIFICATION_RINGTONE)
                 .setLegacyStreamType(AudioManager.STREAM_RING)
                 .build()
@@ -112,7 +112,7 @@ class CallkitSoundPlayerService : Service() {
         }
         setDataSource(uri)
         mediaPlayer?.prepare()
-        mediaPlayer?.isLooping = true
+        //mediaPlayer?.isLooping = true
         mediaPlayer?.start()
     }
 
