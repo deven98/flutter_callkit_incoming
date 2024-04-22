@@ -112,7 +112,7 @@ class CallkitSoundPlayerService : Service() {
         }
         setDataSource(uri)
         mediaPlayer?.prepare()
-        //mediaPlayer?.isLooping = true
+        mediaPlayer?.isLooping = true
         mediaPlayer?.start()
     }
 
